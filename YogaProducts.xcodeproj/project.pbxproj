@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		BEA1E8DF252668FC003FF066 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1E8DE252668FC003FF066 /* AppDelegate.swift */; };
 		BEA1E8E1252668FC003FF066 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1E8E0252668FC003FF066 /* SceneDelegate.swift */; };
-		BEA1E8E3252668FC003FF066 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1E8E2252668FC003FF066 /* ViewController.swift */; };
-		BEA1E8E6252668FC003FF066 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA1E8E4252668FC003FF066 /* Main.storyboard */; };
 		BEA1E8E8252668FD003FF066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA1E8E7252668FD003FF066 /* Assets.xcassets */; };
 		BEA1E8EB252668FD003FF066 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA1E8E9252668FD003FF066 /* LaunchScreen.storyboard */; };
 		BEA1E8F6252668FD003FF066 /* YogaProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1E8F5252668FD003FF066 /* YogaProductsTests.swift */; };
@@ -38,8 +36,6 @@
 		BEA1E8DB252668FC003FF066 /* YogaProducts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YogaProducts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA1E8DE252668FC003FF066 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEA1E8E0252668FC003FF066 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BEA1E8E2252668FC003FF066 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BEA1E8E5252668FC003FF066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BEA1E8E7252668FD003FF066 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEA1E8EA252668FD003FF066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEA1E8EC252668FD003FF066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,13 +95,9 @@
 		BEA1E8DD252668FC003FF066 /* YogaProducts */ = {
 			isa = PBXGroup;
 			children = (
-				BEA1E8DE252668FC003FF066 /* AppDelegate.swift */,
-				BEA1E8E0252668FC003FF066 /* SceneDelegate.swift */,
-				BEA1E8E2252668FC003FF066 /* ViewController.swift */,
-				BEA1E8E4252668FC003FF066 /* Main.storyboard */,
-				BEA1E8E7252668FD003FF066 /* Assets.xcassets */,
-				BEA1E8E9252668FD003FF066 /* LaunchScreen.storyboard */,
+				BEA1E91125267197003FF066 /* ApplicationSetup */,
 				BEA1E8EC252668FD003FF066 /* Info.plist */,
+				BEA1E91825267335003FF066 /* Resources */,
 			);
 			path = YogaProducts;
 			sourceTree = "<group>";
@@ -126,6 +118,24 @@
 				BEA1E902252668FD003FF066 /* Info.plist */,
 			);
 			path = YogaProductsUITests;
+			sourceTree = "<group>";
+		};
+		BEA1E91125267197003FF066 /* ApplicationSetup */ = {
+			isa = PBXGroup;
+			children = (
+				BEA1E8E0252668FC003FF066 /* SceneDelegate.swift */,
+				BEA1E8DE252668FC003FF066 /* AppDelegate.swift */,
+			);
+			path = ApplicationSetup;
+			sourceTree = "<group>";
+		};
+		BEA1E91825267335003FF066 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BEA1E8E7252668FD003FF066 /* Assets.xcassets */,
+				BEA1E8E9252668FD003FF066 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +243,6 @@
 			files = (
 				BEA1E8EB252668FD003FF066 /* LaunchScreen.storyboard in Resources */,
 				BEA1E8E8252668FD003FF066 /* Assets.xcassets in Resources */,
-				BEA1E8E6252668FC003FF066 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +267,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEA1E8E3252668FC003FF066 /* ViewController.swift in Sources */,
 				BEA1E8DF252668FC003FF066 /* AppDelegate.swift in Sources */,
 				BEA1E8E1252668FC003FF066 /* SceneDelegate.swift in Sources */,
 			);
@@ -296,14 +304,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BEA1E8E4252668FC003FF066 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BEA1E8E5252668FC003FF066 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BEA1E8E9252668FD003FF066 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
