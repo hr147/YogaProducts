@@ -16,6 +16,8 @@
 		BE08E4802527A22B00C98E3F /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08E47F2527A22B00C98E3F /* ProductViewController.swift */; };
 		BE08E4882527A24E00C98E3F /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08E4872527A24E00C98E3F /* ProductViewModel.swift */; };
 		BE08E48E2527A43A00C98E3F /* ProductFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08E48D2527A43A00C98E3F /* ProductFactory.swift */; };
+		BE08E4962527BA9D00C98E3F /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE08E4952527BA9D00C98E3F /* Product.storyboard */; };
+		BE08E49E2527C9A100C98E3F /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08E49D2527C9A100C98E3F /* UIStoryboard+Extension.swift */; };
 		BEA1E8DF252668FC003FF066 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1E8DE252668FC003FF066 /* AppDelegate.swift */; };
 		BEA1E8E1252668FC003FF066 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1E8E0252668FC003FF066 /* SceneDelegate.swift */; };
 		BEA1E8E8252668FD003FF066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA1E8E7252668FD003FF066 /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 		BE08E47F2527A22B00C98E3F /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		BE08E4872527A24E00C98E3F /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		BE08E48D2527A43A00C98E3F /* ProductFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFactory.swift; sourceTree = "<group>"; };
+		BE08E4952527BA9D00C98E3F /* Product.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Product.storyboard; sourceTree = "<group>"; };
+		BE08E49D2527C9A100C98E3F /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		BEA1E8DB252668FC003FF066 /* YogaProducts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YogaProducts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA1E8DE252668FC003FF066 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEA1E8E0252668FC003FF066 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 			children = (
 				BE08E40425273C6900C98E3F /* UIColor+Extension.swift */,
 				BE08E40525273C6900C98E3F /* UIFont+Extension.swift */,
+				BE08E49D2527C9A100C98E3F /* UIStoryboard+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			children = (
 				BE08E47F2527A22B00C98E3F /* ProductViewController.swift */,
 				BE08E4872527A24E00C98E3F /* ProductViewModel.swift */,
+				BE08E4952527BA9D00C98E3F /* Product.storyboard */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -334,6 +340,7 @@
 			files = (
 				BEA1E8EB252668FD003FF066 /* LaunchScreen.storyboard in Resources */,
 				BEA1E8E8252668FD003FF066 /* Assets.xcassets in Resources */,
+				BE08E4962527BA9D00C98E3F /* Product.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +367,7 @@
 			files = (
 				BEA1E8DF252668FC003FF066 /* AppDelegate.swift in Sources */,
 				BE08E3FC25273BF200C98E3F /* AppNavigationController.swift in Sources */,
+				BE08E49E2527C9A100C98E3F /* UIStoryboard+Extension.swift in Sources */,
 				BE08E41425275E1C00C98E3F /* Coordinator.swift in Sources */,
 				BEA1E8E1252668FC003FF066 /* SceneDelegate.swift in Sources */,
 				BE08E4882527A24E00C98E3F /* ProductViewModel.swift in Sources */,
