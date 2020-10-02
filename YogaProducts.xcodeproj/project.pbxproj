@@ -10,6 +10,12 @@
 		BE08E3FC25273BF200C98E3F /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08E3F825273BF200C98E3F /* AppNavigationController.swift */; };
 		BE08E40625273C6900C98E3F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08E40425273C6900C98E3F /* UIColor+Extension.swift */; };
 		BE08E40725273C6900C98E3F /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08E40525273C6900C98E3F /* UIFont+Extension.swift */; };
+		BE08E41425275E1C00C98E3F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08E41325275E1C00C98E3F /* Coordinator.swift */; };
+		BE08E4712527670700C98E3F /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08E4702527670700C98E3F /* BaseCoordinator.swift */; };
+		BE08E47925279FBC00C98E3F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08E47825279FBC00C98E3F /* AppCoordinator.swift */; };
+		BE08E4802527A22B00C98E3F /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08E47F2527A22B00C98E3F /* ProductViewController.swift */; };
+		BE08E4882527A24E00C98E3F /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08E4872527A24E00C98E3F /* ProductViewModel.swift */; };
+		BE08E48E2527A43A00C98E3F /* ProductFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08E48D2527A43A00C98E3F /* ProductFactory.swift */; };
 		BEA1E8DF252668FC003FF066 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1E8DE252668FC003FF066 /* AppDelegate.swift */; };
 		BEA1E8E1252668FC003FF066 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1E8E0252668FC003FF066 /* SceneDelegate.swift */; };
 		BEA1E8E8252668FD003FF066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA1E8E7252668FD003FF066 /* Assets.xcassets */; };
@@ -39,6 +45,12 @@
 		BE08E3F825273BF200C98E3F /* AppNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
 		BE08E40425273C6900C98E3F /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		BE08E40525273C6900C98E3F /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		BE08E41325275E1C00C98E3F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		BE08E4702527670700C98E3F /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		BE08E47825279FBC00C98E3F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		BE08E47F2527A22B00C98E3F /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		BE08E4872527A24E00C98E3F /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		BE08E48D2527A43A00C98E3F /* ProductFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFactory.swift; sourceTree = "<group>"; };
 		BEA1E8DB252668FC003FF066 /* YogaProducts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YogaProducts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA1E8DE252668FC003FF066 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEA1E8E0252668FC003FF066 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +93,7 @@
 		BE08E3F225273BF200C98E3F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BE08E41225275DFD00C98E3F /* Coordinator */,
 				BE08E40325273C3F00C98E3F /* Extensions */,
 				BE08E3F325273BF200C98E3F /* Controllers */,
 			);
@@ -102,6 +115,49 @@
 				BE08E40525273C6900C98E3F /* UIFont+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BE08E4112527430B00C98E3F /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				BE08E48C2527A3C500C98E3F /* SceneFactories */,
+				BE08E47D2527A14E00C98E3F /* Scenes */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		BE08E41225275DFD00C98E3F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				BE08E41325275E1C00C98E3F /* Coordinator.swift */,
+				BE08E4702527670700C98E3F /* BaseCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		BE08E47D2527A14E00C98E3F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BE08E47E2527A15900C98E3F /* Product */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BE08E47E2527A15900C98E3F /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				BE08E47F2527A22B00C98E3F /* ProductViewController.swift */,
+				BE08E4872527A24E00C98E3F /* ProductViewModel.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		BE08E48C2527A3C500C98E3F /* SceneFactories */ = {
+			isa = PBXGroup;
+			children = (
+				BE08E48D2527A43A00C98E3F /* ProductFactory.swift */,
+			);
+			path = SceneFactories;
 			sourceTree = "<group>";
 		};
 		BEA1E8D2252668FB003FF066 = {
@@ -129,6 +185,7 @@
 			children = (
 				BEA1E91125267197003FF066 /* ApplicationSetup */,
 				BE08E3F225273BF200C98E3F /* Common */,
+				BE08E4112527430B00C98E3F /* Features */,
 				BEA1E91825267335003FF066 /* Resources */,
 			);
 			path = YogaProducts;
@@ -157,6 +214,7 @@
 			children = (
 				BEA1E8E0252668FC003FF066 /* SceneDelegate.swift */,
 				BEA1E8DE252668FC003FF066 /* AppDelegate.swift */,
+				BE08E47825279FBC00C98E3F /* AppCoordinator.swift */,
 			);
 			path = ApplicationSetup;
 			sourceTree = "<group>";
@@ -302,7 +360,13 @@
 			files = (
 				BEA1E8DF252668FC003FF066 /* AppDelegate.swift in Sources */,
 				BE08E3FC25273BF200C98E3F /* AppNavigationController.swift in Sources */,
+				BE08E41425275E1C00C98E3F /* Coordinator.swift in Sources */,
 				BEA1E8E1252668FC003FF066 /* SceneDelegate.swift in Sources */,
+				BE08E4882527A24E00C98E3F /* ProductViewModel.swift in Sources */,
+				BE08E48E2527A43A00C98E3F /* ProductFactory.swift in Sources */,
+				BE08E47925279FBC00C98E3F /* AppCoordinator.swift in Sources */,
+				BE08E4712527670700C98E3F /* BaseCoordinator.swift in Sources */,
+				BE08E4802527A22B00C98E3F /* ProductViewController.swift in Sources */,
 				BE08E40725273C6900C98E3F /* UIFont+Extension.swift in Sources */,
 				BE08E40625273C6900C98E3F /* UIColor+Extension.swift in Sources */,
 			);
