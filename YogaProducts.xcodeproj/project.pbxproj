@@ -30,6 +30,9 @@
 		BED42ABB2528B842007E8E21 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BED42ABA2528B842007E8E21 /* Alamofire */; };
 		BED42AC22528C0BC007E8E21 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED42AC12528C0BC007E8E21 /* Product.swift */; };
 		BED42ACA2528C13F007E8E21 /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED42AC92528C13F007E8E21 /* ProductResponse.swift */; };
+		BED42AD52528C72E007E8E21 /* ProductRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED42AD42528C72E007E8E21 /* ProductRowViewModel.swift */; };
+		BED42ADA2528C9A9007E8E21 /* UIKit+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED42AD92528C9A9007E8E21 /* UIKit+ReuseIdentifier.swift */; };
+		BED42ADF2528D4E4007E8E21 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED42ADE2528D4E4007E8E21 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,9 @@
 		BED42AB42528B7F3007E8E21 /* NetworkProductUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProductUseCase.swift; sourceTree = "<group>"; };
 		BED42AC12528C0BC007E8E21 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		BED42AC92528C13F007E8E21 /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
+		BED42AD42528C72E007E8E21 /* ProductRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRowViewModel.swift; sourceTree = "<group>"; };
+		BED42AD92528C9A9007E8E21 /* UIKit+ReuseIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+ReuseIdentifier.swift"; sourceTree = "<group>"; };
+		BED42ADE2528D4E4007E8E21 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,9 +133,11 @@
 		BE08E40325273C3F00C98E3F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BED42AD92528C9A9007E8E21 /* UIKit+ReuseIdentifier.swift */,
 				BE08E40425273C6900C98E3F /* UIColor+Extension.swift */,
 				BE08E40525273C6900C98E3F /* UIFont+Extension.swift */,
 				BE08E49D2527C9A100C98E3F /* UIStoryboard+Extension.swift */,
+				BED42ADE2528D4E4007E8E21 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -184,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				BE08E4A62527D17300C98E3F /* ProductTableViewCell.swift */,
+				BED42AD42528C72E007E8E21 /* ProductRowViewModel.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -431,9 +440,12 @@
 				BEA1E8DF252668FC003FF066 /* AppDelegate.swift in Sources */,
 				BE08E3FC25273BF200C98E3F /* AppNavigationController.swift in Sources */,
 				BE08E49E2527C9A100C98E3F /* UIStoryboard+Extension.swift in Sources */,
+				BED42AD52528C72E007E8E21 /* ProductRowViewModel.swift in Sources */,
+				BED42ADA2528C9A9007E8E21 /* UIKit+ReuseIdentifier.swift in Sources */,
 				BE08E41425275E1C00C98E3F /* Coordinator.swift in Sources */,
 				BEA1E8E1252668FC003FF066 /* SceneDelegate.swift in Sources */,
 				BE08E4882527A24E00C98E3F /* ProductViewModel.swift in Sources */,
+				BED42ADF2528D4E4007E8E21 /* UIViewController+Extension.swift in Sources */,
 				BE08E48E2527A43A00C98E3F /* ProductFactory.swift in Sources */,
 				BE08E4A72527D17300C98E3F /* ProductTableViewCell.swift in Sources */,
 				BE08E47925279FBC00C98E3F /* AppCoordinator.swift in Sources */,

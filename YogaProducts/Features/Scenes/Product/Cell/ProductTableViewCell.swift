@@ -7,17 +7,17 @@
 
 import UIKit
 
-class ProductTableViewCell: UITableViewCell {
+final class ProductTableViewCell: UITableViewCell {
+    //MARK:- private properties
+    
+    @IBOutlet private weak var productInfoLabel: UILabel!
+    @IBOutlet private weak var productDescription: UILabel!
+    
+    //MARK:- public methods
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func configure(with viewModel: ProductRowViewModel) {
+        productInfoLabel.text = viewModel.titleInfo
+        productDescription.attributedText = viewModel.description
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    
 }
