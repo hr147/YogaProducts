@@ -8,7 +8,9 @@
 import Foundation
 import Alamofire
 
-final class NetworkProductUseCase: ProductUseCase {
+final class NetworkProductUseCase {
+    // MARK:- Type
+    
     enum ProductUseCaseError: LocalizedError {
         case productNotFound
         case other(Error)
@@ -23,8 +25,12 @@ final class NetworkProductUseCase: ProductUseCase {
         }
     }
     
-    private static let productURL = "https://www.yogaeasy.de/api/v1/products?page=0"
+    // MARK:- Private Properties
     
+    private static let productURL = "https://www.yogaeasy.de/api/v1/products?page=0"
+}
+
+extension NetworkProductUseCase: ProductUseCase {
     func fetchProducts(then completion: @escaping Completion) {
         AF.request(Self.productURL)
             .validate()

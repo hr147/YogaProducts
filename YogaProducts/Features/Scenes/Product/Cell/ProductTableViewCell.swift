@@ -14,10 +14,9 @@ final class ProductTableViewCell: UITableViewCell {
     @IBOutlet private weak var productDescription: UILabel!
     
     //MARK:- public methods
-
+    
     func configure(with viewModel: ProductRowViewModel) {
         productInfoLabel.text = viewModel.titleInfo
         productDescription.attributedText = viewModel.description
     }
-    
 }

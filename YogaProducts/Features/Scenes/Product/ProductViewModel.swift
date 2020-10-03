@@ -18,6 +18,8 @@ final class ProductViewModel {
     // MARK:- Public Properties
     
     let screenTitle = "Products"
+    
+    /// define immutable `stateDidUpdate` property so that subscriber can only read from it.
     private(set) lazy var stateDidUpdate = stateDidUpdateSubject.eraseToAnyPublisher()
     
     // MARK:- Private Properties
@@ -27,7 +29,7 @@ final class ProductViewModel {
     
     // MARK:- Init
     
-    init(productUseCase: ProductUseCase = NetworkProductUseCase()) {
+    init(productUseCase: ProductUseCase) {
         self.productUseCase = productUseCase
     }
     

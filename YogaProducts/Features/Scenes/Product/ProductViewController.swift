@@ -9,13 +9,13 @@ import UIKit
 import Combine
 
 final class ProductViewController: UITableViewController {
-    //MARK:- Private Properties
+    // MARK:- Private Properties
     
     private var cancellable: [AnyCancellable] = []
     private lazy var dataSource = makeDataSource()
     private let viewModel: ProductViewModel
     
-    //MARK:- Init
+    // MARK:- Init
     
     init?(coder: NSCoder, viewModel: ProductViewModel) {
         self.viewModel = viewModel
@@ -30,7 +30,7 @@ final class ProductViewController: UITableViewController {
         fatalError("You must create this view controller with a user.")
     }
     
-    //MARK:- Public methods
+    // MARK:- Public methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ final class ProductViewController: UITableViewController {
         viewModel.viewDidLoad()
     }
     
-    //MARK:- Private Methods
+    // MARK:- Private Methods
     
     private func configureUI() {
         title = viewModel.screenTitle
@@ -47,7 +47,7 @@ final class ProductViewController: UITableViewController {
     }
     
     private func bindViewModel() {
-        viewModel.stateDidUpdate.sink(receiveValue: {[unowned self] state in
+        viewModel.stateDidUpdate.sink(receiveValue: { [unowned self] state in
             self.render(state)
         }).store(in: &cancellable)
     }

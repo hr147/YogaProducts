@@ -15,7 +15,7 @@
 		BE08E47925279FBC00C98E3F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08E47825279FBC00C98E3F /* AppCoordinator.swift */; };
 		BE08E4802527A22B00C98E3F /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08E47F2527A22B00C98E3F /* ProductViewController.swift */; };
 		BE08E4882527A24E00C98E3F /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08E4872527A24E00C98E3F /* ProductViewModel.swift */; };
-		BE08E48E2527A43A00C98E3F /* ProductFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08E48D2527A43A00C98E3F /* ProductFactory.swift */; };
+		BE08E48E2527A43A00C98E3F /* ProductViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08E48D2527A43A00C98E3F /* ProductViewControllersFactory.swift */; };
 		BE08E4962527BA9D00C98E3F /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE08E4952527BA9D00C98E3F /* Product.storyboard */; };
 		BE08E49E2527C9A100C98E3F /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08E49D2527C9A100C98E3F /* UIStoryboard+Extension.swift */; };
 		BE08E4A72527D17300C98E3F /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08E4A62527D17300C98E3F /* ProductTableViewCell.swift */; };
@@ -33,6 +33,8 @@
 		BED42AD52528C72E007E8E21 /* ProductRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED42AD42528C72E007E8E21 /* ProductRowViewModel.swift */; };
 		BED42ADA2528C9A9007E8E21 /* UIKit+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED42AD92528C9A9007E8E21 /* UIKit+ReuseIdentifier.swift */; };
 		BED42ADF2528D4E4007E8E21 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED42ADE2528D4E4007E8E21 /* UIViewController+Extension.swift */; };
+		BED42AE82528F823007E8E21 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = BED42AE72528F823007E8E21 /* Swinject */; };
+		BED42AED2528F848007E8E21 /* AppServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED42AEC2528F848007E8E21 /* AppServiceLocator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +63,7 @@
 		BE08E47825279FBC00C98E3F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		BE08E47F2527A22B00C98E3F /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		BE08E4872527A24E00C98E3F /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
-		BE08E48D2527A43A00C98E3F /* ProductFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFactory.swift; sourceTree = "<group>"; };
+		BE08E48D2527A43A00C98E3F /* ProductViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewControllersFactory.swift; sourceTree = "<group>"; };
 		BE08E4952527BA9D00C98E3F /* Product.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Product.storyboard; sourceTree = "<group>"; };
 		BE08E49D2527C9A100C98E3F /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		BE08E4A62527D17300C98E3F /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		BED42AD42528C72E007E8E21 /* ProductRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRowViewModel.swift; sourceTree = "<group>"; };
 		BED42AD92528C9A9007E8E21 /* UIKit+ReuseIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+ReuseIdentifier.swift"; sourceTree = "<group>"; };
 		BED42ADE2528D4E4007E8E21 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		BED42AEC2528F848007E8E21 /* AppServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServiceLocator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BED42ABB2528B842007E8E21 /* Alamofire in Frameworks */,
+				BED42AE82528F823007E8E21 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +187,7 @@
 		BE08E48C2527A3C500C98E3F /* SceneFactories */ = {
 			isa = PBXGroup;
 			children = (
-				BE08E48D2527A43A00C98E3F /* ProductFactory.swift */,
+				BE08E48D2527A43A00C98E3F /* ProductViewControllersFactory.swift */,
 			);
 			path = SceneFactories;
 			sourceTree = "<group>";
@@ -252,6 +256,7 @@
 				BEA1E8E0252668FC003FF066 /* SceneDelegate.swift */,
 				BEA1E8DE252668FC003FF066 /* AppDelegate.swift */,
 				BE08E47825279FBC00C98E3F /* AppCoordinator.swift */,
+				BED42AEC2528F848007E8E21 /* AppServiceLocator.swift */,
 			);
 			path = ApplicationSetup;
 			sourceTree = "<group>";
@@ -319,6 +324,7 @@
 			name = YogaProducts;
 			packageProductDependencies = (
 				BED42ABA2528B842007E8E21 /* Alamofire */,
+				BED42AE72528F823007E8E21 /* Swinject */,
 			);
 			productName = YogaProducts;
 			productReference = BEA1E8DB252668FC003FF066 /* YogaProducts.app */;
@@ -393,6 +399,7 @@
 			mainGroup = BEA1E8D2252668FB003FF066;
 			packageReferences = (
 				BED42AB92528B842007E8E21 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				BED42AE62528F823007E8E21 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = BEA1E8DC252668FC003FF066 /* Products */;
 			projectDirPath = "";
@@ -442,11 +449,12 @@
 				BE08E49E2527C9A100C98E3F /* UIStoryboard+Extension.swift in Sources */,
 				BED42AD52528C72E007E8E21 /* ProductRowViewModel.swift in Sources */,
 				BED42ADA2528C9A9007E8E21 /* UIKit+ReuseIdentifier.swift in Sources */,
+				BED42AED2528F848007E8E21 /* AppServiceLocator.swift in Sources */,
 				BE08E41425275E1C00C98E3F /* Coordinator.swift in Sources */,
 				BEA1E8E1252668FC003FF066 /* SceneDelegate.swift in Sources */,
 				BE08E4882527A24E00C98E3F /* ProductViewModel.swift in Sources */,
 				BED42ADF2528D4E4007E8E21 /* UIViewController+Extension.swift in Sources */,
-				BE08E48E2527A43A00C98E3F /* ProductFactory.swift in Sources */,
+				BE08E48E2527A43A00C98E3F /* ProductViewControllersFactory.swift in Sources */,
 				BE08E4A72527D17300C98E3F /* ProductTableViewCell.swift in Sources */,
 				BE08E47925279FBC00C98E3F /* AppCoordinator.swift in Sources */,
 				BED42AC22528C0BC007E8E21 /* Product.swift in Sources */,
@@ -785,6 +793,14 @@
 				minimumVersion = 5.2.2;
 			};
 		};
+		BED42AE62528F823007E8E21 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -792,6 +808,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BED42AB92528B842007E8E21 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		BED42AE72528F823007E8E21 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BED42AE62528F823007E8E21 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

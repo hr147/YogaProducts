@@ -7,7 +7,7 @@ extension UIBarButtonItem {
 }
 
 final class AppNavigationController: UINavigationController {
-    // MARK: - View Life Cycle
+    // MARK: - Public Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
