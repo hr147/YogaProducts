@@ -20,9 +20,9 @@ final class ProductViewControllersFactory {
     
     // MARK:- Public Methods
     
-    func makeProductViewController() -> ProductViewController {
+    func makeProductViewController(navigator: ProductNavigator) -> ProductViewController {
         let storyboard = UIStoryboard(name: .product)
-        let viewModel = ProductViewModel(productUseCase: productUseCase)
+        let viewModel = ProductViewModel(productUseCase: productUseCase, navigator: navigator)
         let viewController = storyboard.instantiateInitialViewController {
             ProductViewController(coder: $0, viewModel: viewModel)
         }
@@ -32,5 +32,10 @@ final class ProductViewControllersFactory {
         }
         
         return productViewController
+    }
+    
+    func makeProductDetailViewController() -> ProductDetailViewController {
+        let storyboard = UIStoryboard(name: .productDetail)
+        return storyboard.initialViewController()
     }
 }

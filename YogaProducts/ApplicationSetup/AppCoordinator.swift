@@ -22,9 +22,8 @@ final class AppCoordinator: BaseCoordinator<AppNavigationController> {
     // MARK:- Public Methods
     
     override func start() {
-        let factory = ServiceLocator.productViewControllersFactory()
-        let productViewController = factory.makeProductViewController()
-        rootViewController.pushViewController(productViewController, animated: true)
+        let coordinator = ProductCoordinator(rootViewController: rootViewController)
+        startChild(coordinator)
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
     }

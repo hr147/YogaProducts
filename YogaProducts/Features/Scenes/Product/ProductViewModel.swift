@@ -14,6 +14,10 @@ enum ProductViewModelState {
     case error(String)
 }
 
+protocol ProductNavigator: class {
+    func showProductDetail()
+}
+
 final class ProductViewModel {
     // MARK:- Public Properties
     
@@ -26,11 +30,13 @@ final class ProductViewModel {
     
     private let productUseCase: ProductUseCase
     private let stateDidUpdateSubject = PassthroughSubject<ProductViewModelState, Never>()
+    private unowned let navigator: ProductNavigator
     
     // MARK:- Init
     
-    init(productUseCase: ProductUseCase) {
+    init(productUseCase: ProductUseCase, navigator: ProductNavigator) {
         self.productUseCase = productUseCase
+        self.navigator = navigator
     }
     
     // MARK:- Public Methods
@@ -47,6 +53,10 @@ final class ProductViewModel {
                 self.stateDidUpdateSubject.send(.show(productRows))
             }
         }
+    }
+    
+    func cellDidSelect() {
+        navigator.showProductDetail()
     }
     
     // MARK:- Private methods

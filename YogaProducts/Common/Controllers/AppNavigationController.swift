@@ -37,7 +37,7 @@ final class AppNavigationController: UINavigationController {
         navigationController?.navigationBar.isTranslucent = false
         navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: UIColor.white,
-             NSAttributedString.Key.font: UIFont(.avenirDemiBold, size: .standard(.h1))]
+             NSAttributedString.Key.font: UIFont(.avenirDemiBold, size: .standard(.h3))]
         navigationBar.backgroundColor = .init(color: .standard(.themeColor))
     }
 }

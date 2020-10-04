@@ -7,18 +7,14 @@
 
 import UIKit.UIViewController
 
-class BaseCoordinator<T: UIViewController>: Coordinator {
+class BaseCoordinator<T: UIViewController>: NSObject, Coordinator {
     let rootViewController: T
     
     /// A child flow coordinator started from this flow.
-    var childCoordinator: BaseCoordinator? {
-        didSet {
-            childCoordinator?.parentCoordinator = self
-        }
-    }
+    var child: Coordinator?
 
     /// The parent flow coordinator that started this flow.
-    weak var parentCoordinator: BaseCoordinator?
+    weak var parent: Coordinator?
     
     //MARK: - init
     

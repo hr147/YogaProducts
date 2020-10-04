@@ -39,6 +39,10 @@ final class ProductViewController: UITableViewController {
         viewModel.viewDidLoad()
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.cellDidSelect()
+    }
+    
     // MARK:- Private Methods
     
     private func configureUI() {
