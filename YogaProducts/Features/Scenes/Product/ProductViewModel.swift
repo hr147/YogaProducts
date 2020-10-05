@@ -7,6 +7,7 @@
 
 import Combine
 import Foundation
+import CoreGraphics
 
 /// define all states of view.
 enum ProductViewModelState {
@@ -22,6 +23,8 @@ final class ProductViewModel {
     // MARK:- Public Properties
     
     let screenTitle = "Products"
+    let topSpacingForPortrait: CGFloat = 32.0
+    let topSpacingForLandscape: CGFloat = 16.0
     
     /// define immutable `stateDidUpdate` property so that subscriber can only read from it.
     private(set) lazy var stateDidUpdate = stateDidUpdateSubject.eraseToAnyPublisher()
