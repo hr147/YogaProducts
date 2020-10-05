@@ -38,6 +38,9 @@
 		BED42AF8252904CA007E8E21 /* ProductCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED42AF7252904CA007E8E21 /* ProductCoordinator.swift */; };
 		BED42AFE2529255A007E8E21 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED42AFD2529255A007E8E21 /* ProductDetailViewController.swift */; };
 		BED42B06252925BA007E8E21 /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED42B05252925BA007E8E21 /* ProductDetail.storyboard */; };
+		BED42B0F252B8F1E007E8E21 /* ProductViewModelTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED42B0E252B8F1E007E8E21 /* ProductViewModelTestCase.swift */; };
+		BED42B15252B8FA1007E8E21 /* ProductUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED42B14252B8FA1007E8E21 /* ProductUseCaseMock.swift */; };
+		BED42B1D252B8FB1007E8E21 /* ProductNavigatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED42B1C252B8FB1007E8E21 /* ProductNavigatorMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,9 @@
 		BED42AF7252904CA007E8E21 /* ProductCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCoordinator.swift; sourceTree = "<group>"; };
 		BED42AFD2529255A007E8E21 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		BED42B05252925BA007E8E21 /* ProductDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetail.storyboard; sourceTree = "<group>"; };
+		BED42B0E252B8F1E007E8E21 /* ProductViewModelTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModelTestCase.swift; sourceTree = "<group>"; };
+		BED42B14252B8FA1007E8E21 /* ProductUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductUseCaseMock.swift; sourceTree = "<group>"; };
+		BED42B1C252B8FB1007E8E21 /* ProductNavigatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductNavigatorMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,8 +249,10 @@
 		BEA1E8F4252668FD003FF066 /* YogaProductsTests */ = {
 			isa = PBXGroup;
 			children = (
+				BED42B13252B8F8E007E8E21 /* Mocks */,
 				BEA1E8F5252668FD003FF066 /* YogaProductsTests.swift */,
 				BEA1E8F7252668FD003FF066 /* Info.plist */,
+				BED42B0E252B8F1E007E8E21 /* ProductViewModelTestCase.swift */,
 			);
 			path = YogaProductsTests;
 			sourceTree = "<group>";
@@ -321,6 +329,15 @@
 				BED42B05252925BA007E8E21 /* ProductDetail.storyboard */,
 			);
 			path = ProductDetail;
+			sourceTree = "<group>";
+		};
+		BED42B13252B8F8E007E8E21 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				BED42B14252B8FA1007E8E21 /* ProductUseCaseMock.swift */,
+				BED42B1C252B8FB1007E8E21 /* ProductNavigatorMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -492,7 +509,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BED42B0F252B8F1E007E8E21 /* ProductViewModelTestCase.swift in Sources */,
+				BED42B15252B8FA1007E8E21 /* ProductUseCaseMock.swift in Sources */,
 				BEA1E8F6252668FD003FF066 /* YogaProductsTests.swift in Sources */,
+				BED42B1D252B8FB1007E8E21 /* ProductNavigatorMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
