@@ -66,8 +66,8 @@ final class ProductViewController: UITableViewController {
     
     private func registerNotification() {
         token = notificationCenter.addObserver(forName: UIDevice.orientationDidChangeNotification,
-                                   object: nil,
-                                   queue: mainQueue) { [weak self] _ in
+                                               object: nil,
+                                               queue: mainQueue) { [weak self] _ in
             self?.updateTableViewTopSpacing()
         }
     }
