@@ -11,6 +11,9 @@ import Combine
 final class ProductViewController: UITableViewController {
     // MARK:- Private Properties
     
+    private let notificationCenter = NotificationCenter.default
+    private let mainQueue = OperationQueue.main
+    private var token: NSObjectProtocol?
     private var cancellable: [AnyCancellable] = []
     private lazy var dataSource = makeDataSource()
     private let viewModel: ProductViewModel
@@ -26,6 +29,10 @@ final class ProductViewController: UITableViewController {
         fatalError("You must create this view controller with a user.")
     }
     
+    deinit {
+        token.map(notificationCenter.removeObserver(_:))
+    }
+    
     // MARK:- Public methods
     
     override func viewDidLoad() {
@@ -35,6 +42,15 @@ final class ProductViewController: UITableViewController {
         viewModel.viewDidLoad()
     }
     
+    override var traitCollection: UITraitCollection {
+        var newTraitCollection: [UITraitCollection] = [super.traitCollection]
+        if UIDevice.current.userInterfaceIdiom == .pad && UIDevice.current.orientation.isLandscape {
+            newTraitCollection += [UITraitCollection(verticalSizeClass: .compact), UITraitCollection(horizontalSizeClass: .unspecified)]
+            
+        }
+        return UITraitCollection(traitsFrom: newTraitCollection)
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.cellDidSelect()
     }
@@ -42,8 +58,27 @@ final class ProductViewController: UITableViewController {
     // MARK:- Private Methods
     
     private func configureUI() {
+        registerNotification()
+        updateTableViewTopSpacing()
         title = viewModel.screenTitle
         tableView.dataSource = dataSource
+    }
+    
+    private func registerNotification() {
+        token = notificationCenter.addObserver(forName: UIDevice.orientationDidChangeNotification,
+                                               object: nil,
+                                               queue: mainQueue) { [weak self] _ in
+            self?.updateTableViewTopSpacing()
+        }
+    }
+    
+    private func updateTableViewTopSpacing() {
+        guard UIDevice.current.orientation.isLandscape else {
+            tableView.contentInset.top = viewModel.topSpacingForPortrait
+            return
+        }
+        
+        tableView.contentInset.top = viewModel.topSpacingForLandscape
     }
     
     private func bindViewModel() {
