@@ -35,6 +35,15 @@ final class ProductViewController: UITableViewController {
         viewModel.viewDidLoad()
     }
     
+    override var traitCollection: UITraitCollection {
+        var newTraitCollection: [UITraitCollection] = [super.traitCollection]
+        if UIDevice.current.userInterfaceIdiom == .pad && UIDevice.current.orientation.isLandscape {
+            newTraitCollection += [UITraitCollection(verticalSizeClass: .compact), UITraitCollection(horizontalSizeClass: .unspecified)]
+            
+        }
+        return UITraitCollection(traitsFrom: newTraitCollection)
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.cellDidSelect()
     }
