@@ -7,13 +7,14 @@
 
 import UIKit.UIViewController
 
+/// The `BaseCoordinator` is provides basic/abstract implementation of navigations.
+/// it is responsible to manage the presentation logic of view controllers.
+/// subclass can override `start` implementation for their specific presentation logic.
 class BaseCoordinator<T: UIViewController>: NSObject, Coordinator {
     let rootViewController: T
-    
-    /// A child flow coordinator started from this flow.
+
     var child: Coordinator?
 
-    /// The parent flow coordinator that started this flow.
     weak var parent: Coordinator?
     
     //MARK: - init
@@ -24,6 +25,7 @@ class BaseCoordinator<T: UIViewController>: NSObject, Coordinator {
     
     //MARK: - Public Methods
     
+    /// show first view controller
     func start() {
         assertionFailure("child class must override it.")
     }

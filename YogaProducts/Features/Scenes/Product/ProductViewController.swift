@@ -22,10 +22,6 @@ final class ProductViewController: UITableViewController {
         super.init(coder: coder)
     }
     
-    deinit {
-        print(String(describing: Self.self))
-    }
-    
     required init?(coder: NSCoder) {
         fatalError("You must create this view controller with a user.")
     }
